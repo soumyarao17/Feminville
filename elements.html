@@ -6,69 +6,96 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      
-      #map {
-        height: 500px;
-		width:500px;
-      }
-      
-    </style>
+    .container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+      </style>
+
   </head>
   <body>
+  	<div class="container">
+  <img src="images/doctor.jpg" alt="">
+  <p>Hello. How are you today?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+  <img src="images/blank.jpg" alt="" class="right">
+  <p>Hey! I'm fine. Thanks for asking!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+  <img src="/w3images/bandmember.jpg" alt="Avatar">
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+<div class="container darker">
+  <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
+  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
   
   
   <body class="subpage">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="index.html">Feminville<span>by Soumya Rao</span></a></div>
-				<a href="#menu">Menu</a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Ailments</a></li>
-					<li><a href="elements.html">Find a Gynae</a></li>
-				</ul>
-			</nav>
-
-		<!-- One -->
-			<section id="One" class="wrapper style3">
-				<div class="inner">
-					<header class="align-center">
-						<p>FIND</p>
-						<h2>GYNAE NEAR YOU</h2>
-					</header>
-				</div>
-			</section>
+		
 
   
   
  
   
-    <div id="map"></div>
-    <script>
-      function initMap() {
-	  var location = {lat: 28, lng: 77};
-       var map = new google.maps.Map(document.getElementById('map'), {
-          center: location,
-          zoom: 8
-        });
-      }
-    </script>
-	
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4Ls8VFQvkyOScB3Jr7OUC6qPLGxYv9kY&callback=initMap"
-    async defer></script>
+    
+    
 	
 	
-	<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 	
 	
 	
